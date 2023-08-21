@@ -15,4 +15,8 @@
         <li><strong>Genres: </strong>{{ book_genre }}</li>
         <li><strong>Books with summary: </strong>{{ descr_books }}</li>
     </ul>
+
+    <p>
+        You've visited this page {{ num_visits }}{% if num_visits == 1 %} time {% else %} times {% endif %}
+    </p>
  {% endblock %}
