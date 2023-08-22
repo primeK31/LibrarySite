@@ -29,6 +29,8 @@
                     {% else %}
                      <li><a href="{% url 'login' %}?next={{ request.path }}">Login</a></li>
                     {% endif %}
+
+                    <li><a href="{% url 'all_borrowed' %}">All borrowed books</a></li>
                 </ul>
                 {% endblock %}
             </div>
