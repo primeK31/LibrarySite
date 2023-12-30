@@ -2,7 +2,7 @@
 
 {%block content %}
     <h1>Book List</h1>
-
+    <a href="{% url 'book-create' %}">Create Book</a>
     {% if book_list %}
     <ul>
         {% for book in book_list %}

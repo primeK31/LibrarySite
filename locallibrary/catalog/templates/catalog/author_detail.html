@@ -11,4 +11,15 @@
     <p><a href="{% url 'book-detail' book.pk %}">{{ book.title }}</a></p>
     {% endfor %}
   </div>
+
+  <hr>
+  <ul class="sidebar-nav">
+    {% if perms.catalog.change_author %}
+      <li><a href="{% url 'author-update' author.id %}">Update author</a></li>
+    {% endif %}
+    {% if perms.catalog.delete_author %}
+      <li><a href="{% url 'author-delete' author.id %}">Delete author</a></li>
+    {% endif %}
+    </ul>
+
 {% endblock %}
